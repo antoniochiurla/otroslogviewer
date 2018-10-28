@@ -145,8 +145,6 @@ project(':OtrosLogViewer-app') {
         compile project(':OtrosSwing')
         compile project(':OtrosVfsBrowser')
         compile project(':OtrosLogViewer-api')
-        compile project(':ScalaFormatter')
-        compile project(':LoggerConfigParser')
         testCompile 'com.github.tomakehurst:wiremock:1.58'
         testCompile 'org.awaitility:awaitility:2.0.0'
     }
@@ -170,42 +168,12 @@ project(':OtrosLogViewer-app') {
     }
 }
 
-project(':ScalaFormatter'){
-    apply plugin: "com.github.maiflai.scalatest"
-    apply plugin: 'scala'
-
-
-    dependencies {
-        compile project(':Common-libs')
-        compile project(':OtrosLogViewer-api')
-        testCompile "org.scalatest:scalatest_2.12:3.0.4"
-        testRuntime 'org.pegdown:pegdown:1.1.0'
-        testCompile 'junit:junit:4.12'
-    }
-
-}
-
-project(':LoggerConfigParser'){
-    apply plugin: "com.github.maiflai.scalatest"
-    apply plugin: 'scala'
-
-    dependencies {
-        compile project(':Common-libs')
-        compile project(':OtrosLogViewer-api')
-        testCompile "org.scalatest:scalatest_2.12:3.0.4"
-        testRuntime 'org.pegdown:pegdown:1.1.0'
-        testCompile 'junit:junit:4.12'
-    }
-
-}
-
 project(':OtrosAppDist') {
     dependencies {
         compile project(':Common-libs')
         compile project(':OtrosStarter')
         compile project(':OtrosLogViewer-app')
         compile project(':OtrosLogViewer-api')
-        compile project(':ScalaFormatter')
     }
 
     version = sharedVersion
