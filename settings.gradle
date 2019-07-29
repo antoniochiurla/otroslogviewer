@@ -1,1 +1,1 @@
-include 'OtrosLogViewer-app', 'Common-libs', 'OtrosStarter', 'OtrosAppDist', 'OtrosSwing', 'OtrosLogViewer-api', 'OtrosVfsBrowser', 'ScenarioTests'
+include 'OtrosLogViewer-app', 'Common-libs', 'OtrosStarter', 'OtrosAppDist', 'OtrosSwing', 'OtrosWeb', 'OtrosLogViewer-api', 'OtrosVfsBrowser', 'ScenarioTests'

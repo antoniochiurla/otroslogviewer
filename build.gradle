@@ -93,6 +93,7 @@ project(':Common-libs') {
         compile "org.scala-lang.modules:scala-parser-combinators_2.12:1.1.0"
         compile "io.dropwizard.metrics:metrics-core:3.2.2"
         compile "com.github.cjwizard:cjwizard:1.0.9"
+        compile "org.apache.httpcomponents:httpcore-nio:4.4.10"
     }
 }
 
@@ -122,6 +123,15 @@ project(':OtrosSwing') {
     version = sharedVersion
 }
 
+project(':OtrosWeb') {
+
+    dependencies {
+        compile project(':Common-libs')
+        compile project(':OtrosLogViewer-api')
+    }
+    version = sharedVersion
+}
+
 project(':OtrosVfsBrowser') {
 
    dependencies {
@@ -143,6 +153,7 @@ project(':OtrosLogViewer-app') {
     dependencies {
         compile project(':Common-libs')
         compile project(':OtrosSwing')
+        compile project(':OtrosWeb')
         compile project(':OtrosVfsBrowser')
         compile project(':OtrosLogViewer-api')
         testCompile 'com.github.tomakehurst:wiremock:1.58'

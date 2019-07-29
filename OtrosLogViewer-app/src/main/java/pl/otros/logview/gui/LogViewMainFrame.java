@@ -716,6 +716,7 @@ public class LogViewMainFrame extends JFrame {
     toolsMenu.add(new ShowMessageColorizerEditor(otrosApplication));
     toolsMenu.add(new ShowLoadedPlugins(otrosApplication));
     toolsMenu.add(new ShowOlvLogs(otrosApplication));
+    toolsMenu.add(new JMenuItem(new StartWebServer(otrosApplication)));
     toolsMenu.add(new OpenPreferencesAction(otrosApplication));
     toolsMenu.add(closeAll);
     final ParseClipboard parseClipboard = new ParseClipboard(otrosApplication);
